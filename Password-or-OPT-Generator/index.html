@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pass.css">
+    <title>Password or OTP generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password/OTP generator</h1>
+        <p>Enter the length of the Password or OTP you want to generate:</p>
+        <input type="number" min="1" value="1" id="length">
+        <p>Select those options which you want to include in your password:</p>
+        <input type="checkbox"  id="lowercase" onmousedown="toggleRadio(this)">Lowercase
+        <input type="checkbox"  id="uppercase" onmousedown="toggleRadio(this)">Uppercase
+        <input type="checkbox" id="numbers" onmousedown="toggleRadio(this)">Numbers
+        <input type="checkbox"  id="symbols" onmousedown="toggleRadio(this)">Symbols  <br>
+        <div class="rad"></div>
+        <h2 id="display"></h2>
+        <h2 id="displayError"></h2>
+        <button onclick="Submit()" class="sub">Generate</button>
+    </div>
+
+    <script src="pass.js"></script>
+</body>
+</html>

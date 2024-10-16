@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Calculator</h1>
+        <div class="box">
+            <div class="output" id="out"></div>
+            <div class="num" id="r1">
+                <button onclick="clicked('AC')">AC</button>
+                <button onclick="clicked('+/-')">+/-</button>
+                <button onclick="clicked('%')">%</button>
+                <button onclick="clicked('/')">/</button>
+            </div>
+            <div class="num" id="r2">
+                <button onclick="clicked('7')">7</button>
+                <button onclick="clicked('8')">8</button>
+                <button onclick="clicked('9')">9</button>
+                <button onclick="clicked('*')">X</button>
+            </div>
+            <div class="num" id="r3">
+                <button onclick="clicked('4')">4</button>
+                <button onclick="clicked('5')">5</button>
+                <button onclick="clicked('6')">6</button>
+                <button onclick="clicked('-')">-</button>
+            </div>
+            <div class="num" id="r4">
+                <button onclick="clicked('1')">1</button>
+                <button onclick="clicked('2')">2</button>
+                <button onclick="clicked('3')">3</button>
+                <button onclick="clicked('+')">+</button>
+            </div>
+            <div class="num" id="r5">
+                <button class="zero" onclick="clicked('0')">0</button>
+                <button onclick="clicked('.')">.</button>
+                <button onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+    
+</body>
+</html>

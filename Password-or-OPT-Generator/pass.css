@@ -1,0 +1,24 @@
+.container{
+     text-align: center;
+     margin: 40px;
+}
+p{
+    font-weight: bold;
+}
+.rad{
+    font-weight: bold;
+}
+.sub{
+    margin: 20px;
+    width: 90px;
+    height: 30px;
+    background-color: aqua;
+    border-radius: 10px;
+}
+:hover.sub {
+    background-color: rgb(44, 133, 133);
+    cursor: pointer;
+} 
+#displayError{
+    color: red;
+}

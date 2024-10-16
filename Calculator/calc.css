@@ -1,0 +1,61 @@
+body{
+    margin: auto;
+    text-align: center;
+    background-color: rgb(167, 167, 167);
+}
+.container{
+    text-align: center;
+}
+.box{
+    margin: auto;
+    border-radius: 2vw;
+    text-align: center;
+    border: 2px solid black;
+    width: 23em;
+    height: 30em;
+    background-color: rgb(95, 94, 94);
+    
+}
+.box .output{
+    border-radius: 10px;
+    border: 2px solid rgb(126, 126, 126);;
+    background-color: rgb(163, 163, 163);
+    margin: 0.5em;
+    padding-right: 15px;
+    width: 10.5em;
+    height: 1.5em;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: end;
+    align-items: center;
+}
+.num{
+    
+    margin: 20px;
+}
+button{
+    margin:-10px 5px 0px 5px;
+    width: 4.5em;
+    height: 4.5em;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: 15px;
+    background-color: rgb(227, 222, 222);
+    
+}
+.zero{
+     background-color: rgb(227, 222, 222);
+    width: 10em;
+    border-radius: 50px;
+}
+button:hover   {
+    background-color: rgb(173, 170, 170);
+    width: 4.75em;
+    height: 4.75em;
+}
+.zero:hover{
+    background-color: rgb(173, 170, 170);
+    width: 4.75em;
+    width: 10.25em;
+}

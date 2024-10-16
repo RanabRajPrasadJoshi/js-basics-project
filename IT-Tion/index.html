@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <style>
+/* Example CSS animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Apply animations to specific elements */
+.navbar-nav .nav-link {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.carousel-item {
+    animation: fadeIn 1s ease-out;
+}
+
+.featurette {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+
+
+        .error-box-shadow {
+            box-shadow: 0 0 0 0.25rem rgba(251, 105, 27, 0.637);
+        }
+        .error-message {
+            color: red;
+            display: none;
+        }
+        .navbar-expand-lg .navbar-collapse {
+
+            margin-left: 15vw;
+
+        }
+
+
+
+        /* Custom styles for buttons */
+        .btn-primary {
+            background-color: #2c444e;
+            border-color: #2c444e;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #2c3d47;
+            /* Darken the color slightly on hover */
+            border-color: #2c3d47;
+            /* Darken the border color on hover */
+        }
+
+        .btn-primary:focus,
+        .btn-primary.focus {
+            box-shadow: 0 0 0 0.25rem rgba(44, 68, 78, 0.5);
+            /* Add a focus shadow effect */
+        }
+
+        .btn-outline-success {
+            color: #2c444e;
+            border-color: #2c444e;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-outline-success:hover {
+            color: #fff;
+            /* Change text color on hover */
+            background-color: #2c444e;
+            /* Change background color on hover */
+        }
+
+        .btn-outline-success:focus,
+        .btn-outline-success.focus {
+            box-shadow: 0 0 0 0.25rem rgba(44, 68, 78, 0.5);
+            /* Add a focus shadow effect */
+        }
+
+        .btn-success {
+            background-color: #2c444e;
+            border-color: #2c444e;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-success:hover {
+            background-color: #2c3d47;
+            /* Darken the color slightly on hover */
+            border-color: #2c3d47;
+            /* Darken the border color on hover */
+        }
+
+        .btn-success:focus,
+        .btn-success.focus {
+            box-shadow: 0 0 0 0.25rem rgba(44, 68, 78, 0.5);
+            /* Add a focus shadow effect */
+        }
+
+        .navbar-nav .nav-link {
+            transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.5s ease;
+            /* Smooth transition for color, background-color, and border-radius */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #fff;
+            /* Change the color on hover */
+            background-color: #2c444e;
+            /* Change the background color on hover */
+            border-radius: 10px;
+        }
+
+        /* Custom sliding animation for carousel */
+        .carousel-item {
+            transition: transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+            /* Smooth sliding transition with cubic-bezier curve */
+        }
+
+        .carousel-inner {
+            overflow: hidden;
+            /* Hide overflow to prevent scrollbar */
+        }
+
+        .carousel-item-next.carousel-item-left,
+        .carousel-item-prev.carousel-item-right {
+            transform: translateX(0);
+            /* Ensure immediate visibility */
+            filter: blur(500px);
+            /* Apply motion blur effect */
+        }
+
+        .carousel-item-next,
+        .active.carousel-item-right {
+            transform: translateX(0%);
+            /* Slide in from right */
+        }
+
+        .carousel-item-prev,
+        .active.carousel-item-left {
+            transform: translateX(0%);
+            /* Slide in from left */
+        }
+
+        /* Preload images to avoid blank space during transitions */
+        .preload {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            /* Add margin to the navbar brand and toggle button */
+
+            /* Add margin to the carousel */
+            #carouselExampleIndicators {
+                margin: 20px;
+            }
+
+            /* Add margin to the featurette headings */
+            .featurette-heading {
+                margin-bottom: 10px;
+            }
+
+            /* Add margin to the contact form */
+            #contact-section form {
+                margin: 20px;
+            }
+
+            .navbar-collapse {
+                text-align: center;
+            }
+
+            #r-btn {
+                margin-top: 10px;
+            }
+
+            .row>* {
+
+                text-align: center;
+            }
+
+            .p-4 {
+                padding: 1.5rem !important;
+                width: 90%;
+            }
+
+            #sub-btn {
+                display: flex;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 container-fluid" id="nav">
+        <div class="container-fluid">
+
+            <a class="navbar-brand ms-5" href="#">IT TION</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#text-section">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">Contact us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button class="btn btn-outline-success me-2"  onclick="loggg()"  type="submit">Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-success" id="r-btn">Register</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Crouser  -->
+    <div id="carouselExampleIndicators" class="carousel slide my-5">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner w-800">
+            <div class="carousel-item active">
+                <img src="asstes/1.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>WELCOME TO IT SOLUTION</h1>
+                    <p class="fs-5">
+                        Empowering Your Business with Cutting-Edge IT Solutions that Drive
+                        Innovation and Efficiency
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="asstes/3.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>TRYING TO HELP YOU</h5>
+                    <p>Simplifying IT, Amplifying Success.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="asstes/2.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>LETS BUILD TOGETHER</h5>
+                    <p>Your Vision, Our IT Expertise.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Service -->
+    <section id="text-section">
+        <h2 class="text-black text-center">OUR SERVICE</h2>
+        <div class="container marketing ">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row my-5">
+                <!-- START THE FEATURETTES -->
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading fw-normal lh-1">Custom Web App Development <span
+                                class="text-body-secondary">Its all yours</span></h2>
+                        <p class="lead">Our custom web app development services are designed to create tailored banking
+                            solutions that cater to your unique requirements. We focus on building user-centric
+                            applications that provide seamless experiences across multiple platforms, including
+                            desktops, mobile devices, and tablets. Our team of experienced developers uses the latest
+                            technologies and frameworks to ensure your banking app is robust, scalable, and secure. From
+                            initial concept to final deployment, we work closely with you to deliver a product that
+                            meets your specific needs and exceeds your expectations</p>
+                    </div>
+                    <div class="col-md-5">
+                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                            width="700" height="500" src="asstes/8.avif" alt="">
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="col-md-7 order-md-2">
+                        <h2 class="featurette-heading fw-normal lh-1"> Secure Authentication Systems<span
+                                class="text-body-secondary">We respect your privacy </span></h2>
+                        <p class="lead">Ensuring the security of user access is paramount in banking applications. We
+                            implement advanced secure authentication systems, including multi-factor authentication
+                            (MFA) and biometric authentication methods, to protect sensitive information. Our solutions
+                            are designed to provide a seamless yet secure login experience, reducing the risk of
+                            unauthorized access. By incorporating the latest security protocols, we help you build trust
+                            with your users while complying with industry standards and regulations</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                            width="500" height="500" src="asstes/4.jpg" alt="">
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading fw-normal lh-1">Transaction Management Systems <span
+                                class="text-body-secondary">We are here.</span></h2>
+                        <p class="lead">Our transaction management systems offer real-time processing capabilities that
+                            ensure fast and reliable financial transactions. We integrate secure payment gateways and
+                            provide automated clearing house (ACH) services to streamline your transaction processes.
+                            Our solutions include comprehensive monitoring and reporting tools, enabling you to manage
+                            transactions efficiently and detect any irregularities promptly. With a focus on accuracy
+                            and security, we help you deliver a seamless banking experience to your customers.</p>
+                    </div>
+                    <div class="col-md-5">
+                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                            width="700" height="500" src="asstes/6.avif" alt="">
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <!-- /END THE FEATURETTES -->
+
+            </div>
+    </section>
+
+    <!-- about us -->
+    <section id="about-us">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+
+
+            <h3 class="text-body-emphasis">OUR AMBITION</h3>
+            <p class="col-lg-8 mx-auto fs-5 text-muted">
+                At IT TION, we're dedicated to driving your business forward through innovative IT solutions. With a
+                team of experienced professionals, we offer tailored services to meet your specific needs. Our focus is
+                on delivering secure, reliable, and scalable technology solutions that empower your organization to
+                succeed in today's digital world. We understand the importance of collaboration and take the time to
+                understand your unique challenges and goals. From infrastructure optimization to cybersecurity, we're
+                committed to providing expert guidance and support every step of the way. At IT TION, we're not just
+                about technology we're about building lasting partnerships based on trust and results. Let us help you
+                navigate the complexities of IT and unlock your business's full potential.
+            </p>
+
+        </div>
+    </section>
+    <hr class="featurette-divider">
+    <!-- contact section -->
+    <section id="contact-section">
+        <div class="container my-5 border border-black p-4">
+            <h4 class="text-center text-black">CONTACT US</h4>
+            <p id="hh"></p>
+            <form >
+                <div class="mb-3 ">
+
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                        placeholder="Name" onkeyup="showNameErr()" >
+                        <span class="text-danger" id="error-n"></span>
+                </div>
+                <div class="mb-3 ">
+
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Email" onkeyup="showError()">
+                        <span class="text-danger" id="error-m"></span>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="form-floating my-4">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Comments</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary text-center" id="sub-btn">Submit</button>
+            </form>
+            
+            <div class="cointain" id="error-msg"></div>
+        </div>
+    </section>
+    <!-- footer secton -->
+    <section id="footer-section">
+        <footer class="py-5 text-center text-body-secondary  bg-dark">
+            <p class="text-light">YOUR FRIENDLY SOLUTION <a href="https://getbootstrap.com/"
+                    style="color: rgb(148, 144, 144); ">IT TION</a></p>
+            <p class="mb-0  text-light">
+                <a href="#" style="color: rgb(148, 144, 144);">Back to top</a>
+            </p>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,16 @@
+body{
+    margin: auto;
+    text-align: center;
+    
+}
+.sss{
+    width: 90px;
+    height: 30px;
+    background-color: aqua;
+    border-radius: 10px;
+}
+:hover.sss {
+    background-color: rgb(44, 133, 133);
+    cursor: pointer;
+} 
+
